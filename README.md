@@ -4,11 +4,11 @@
  technologies: Python, Flask, BeautifulSoup, Requests, Vercel, HTML, CSS, JavaScript 
  demo: https://extracto-lovat.vercel.app/
  highlight: true 
- image: front-end/foto.png 
+ image: /front-end/foto.png 
  --> 
 
 <p align="center"> 
-  <img src="front-end/foto.png" alt="Capa do projeto" width="1200"> 
+  <img src="/front-end/foto.png" alt="Capa do projeto" width="1200"> 
 </p>
 
 # 🚀 Extracto — Extrator de Texto Web (foco em Ciência de Dados)
