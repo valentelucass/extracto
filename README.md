@@ -1,17 +1,28 @@
-# 🚀 Extrator de Texto Web - Backend Python
+<!-- PORTFOLIO-FEATURED 
+ title: Extracto - Extrator Inteligente de Texto
+ description: Ferramenta web para extração robusta de texto de páginas (com fallback de renderização), limpeza de anúncios/popup e exportação, pronta para pipelines de ciência de dados. 
+ technologies: Python, Flask, BeautifulSoup, Requests, Vercel, HTML, CSS, JavaScript 
+ demo: https://extracto-lovat.vercel.app/
+ highlight: true 
+ image: front-end/foto.png 
+ --> 
+
+<p align="center"> 
+  <img src="front-end/foto.png" alt="Capa do projeto" width="1200"> 
+</p>
+
+# 🚀 Extracto — Extrator de Texto Web (foco em Ciência de Dados)
 
 ## 📋 Sobre
 
-Backend Python moderno para extração inteligente de texto de sites usando **Flask**, **BeautifulSoup** e **Selenium**.
-Ferramenta profissional para scraping web com interface web responsiva.
+Backend e frontend para extração inteligente de texto de sites usando **Flask**, **BeautifulSoup** e **Requests**, com fallback gratuito de renderização via Jina Reader e pronto para deploy na **Vercel**. Resultado pensado para alimentar pipelines de **Ciência de Dados** (pré-processamento, sumarização, análise textual).
 
 ## 🛠️ Tecnologias
 
 - **Python 3.8+**
 - **Flask 2.3.3** - Framework web
-- **BeautifulSoup 4.12.2** - Para parsing HTML
-- **Selenium 4.15.2** - Automação de navegador
-- **WebDriver Manager 4.0.1** - Gerenciamento de drivers
+- **BeautifulSoup 4.12.2** - Parsing HTML
+- **Requests 2.31.0** - Requisições HTTP
 - **Requests 2.31.0** - Requisições HTTP
 - **Flask-CORS 4.0.0** - Configuração CORS
 - **HTML/CSS/JavaScript** - Interface web
@@ -21,7 +32,7 @@ Ferramenta profissional para scraping web com interface web responsiva.
 ### Pré-requisitos
 - Python 3.8 ou superior
 - pip (gerenciador de pacotes Python)
-- Google Chrome (para Selenium)
+ 
 
 ### Executar o projeto
 
@@ -64,7 +75,7 @@ Extrai texto de uma URL
 ```
 
 ### GET `/arquivos`
-Lista todos os arquivos salvos
+Lista arquivos no diretório de resultados (mantido para compatibilidade; por padrão, o front usa histórico local)
 
 **Response:**
 ```json
@@ -102,7 +113,7 @@ Exclui arquivos antigos
 ✅ **Extração Inteligente** - Remove automaticamente menus, ads e elementos desnecessários  
 ✅ **Múltiplos Seletores** - Usa vários seletores CSS para encontrar o conteúdo principal  
 ✅ **Sanitização** - Limpa e formata o texto extraído  
-✅ **Gerenciamento de Arquivos** - Salva, lista, baixa e deleta arquivos  
+✅ **Histórico Local** - Armazena extrações recentes no navegador (download sob demanda)  
 ✅ **CORS Configurado** - Funciona com qualquer frontend  
 ✅ **Tratamento de Erros** - Respostas consistentes e informativas  
 
@@ -136,7 +147,7 @@ CORS(app, resources={
 │   ├── script.js                   # Lógica do frontend
 │   ├── styles.css                  # Estilos CSS
 │   └── favicon.ico                 # Ícone da página
-├── resultados/                     # Arquivos extraídos (gerado automaticamente)
+├── resultados/                     # Arquivos extraídos (compatibilidade)
 └── .gitignore                      # Arquivos ignorados pelo git
 ```
 
