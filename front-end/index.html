@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrator de Texto Web - Ferramenta Profissional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="main-title">
+                    <i class="fas fa-text-width"></i>
+                    Extracto
+                </h1>
+                <p class="subtitle">Ferramenta profissional para extração inteligente de conteúdo web</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Feature Cards -->
+            <section class="cards-section">
+                <div class="cards-grid">
+                    <!-- Primeira linha de cards -->
+                    <div class="cards-row">
+                        <!-- Card 1: Extração Inteligente -->
+                        <div class="card" data-card="extraction">
+                            <div class="card-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="card-title">Extração Inteligente</h3>
+                            <p class="card-description">
+                                Algoritmo avançado que identifica automaticamente o conteúdo principal da página,
+                                ignorando elementos desnecessários como menus e publicidade.
+                            </p>
+                            <div class="card-stats">
+                                <span class="stat">
+                                    <i class="fas fa-check-circle"></i>
+                                    99% de precisão
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Múltiplos Formatos -->
+                        <div class="card" data-card="formats">
+                            <div class="card-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3 class="card-title">Múltiplos Formatos</h3>
+                            <p class="card-description">
+                                Suporte completo para diferentes tipos de sites: blogs, notícias, artigos,
+                                documentação e páginas dinâmicas com JavaScript.
+                            </p>
+                            <div class="card-stats">
+                                <span class="stat">
+                                    <i class="fas fa-globe"></i>
+                                    Todos os sites
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Segunda linha de cards -->
+                    <div class="cards-row">
+                        <!-- Card 3: Processamento Rápido -->
+                        <div class="card" data-card="speed">
+                            <div class="card-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3 class="card-title">Processamento Rápido</h3>
+                            <p class="card-description">
+                                Engine otimizada com Selenium e BeautifulSoup para extração eficiente,
+                                com tratamento automático de popups e cookies.
+                            </p>
+                            <div class="card-stats">
+                                <span class="stat">
+                                    <i class="fas fa-clock"></i>
+                                    &lt; 10 segundos
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Dados Brutos para IA -->
+                        <div class="card" data-card="raw-data">
+                            <div class="card-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="card-title">Coleta de Dados Brutos</h3>
+                            <p class="card-description">
+                                Extrai textos puros das páginas web para alimentar modelos de IA, permitindo análises,
+                                respostas e conversas mais profundas sobre o conteúdo abordado.
+                            </p>
+                            <div class="card-stats">
+                                <span class="stat">
+                                    <i class="fas fa-check-circle"></i>
+                                    Pronto para uso em IA
+                                </span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action Section -->
+            <section class="action-section">
+                <div class="action-card">
+                    <h2 class="action-title">Comece a Extrair Agora</h2>
+                    <p class="action-description">
+                        Cole a URL do site que deseja extrair o texto e deixe nossa ferramenta fazer o trabalho pesado.
+                    </p>
+
+                    <form class="extraction-form" id="extractionForm">
+                        <div class="input-group">
+                            <input type="url" id="urlInput" placeholder="https://exemplo.com/artigo" required
+                                class="url-input">
+                            <button type="submit" class="extract-btn" id="extractBtn">
+                                <i class="fas fa-download"></i>
+                                Extrair Texto
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="status-message" id="statusMessage"></div>
+                </div>
+            </section>
+
+            <section class="action-section">
+                <div class="results-section" id="resultsSection" style="display: none;">
+                    <div class="results-header">
+                        <h3>Arquivos Extraídos</h3>
+                        <div class="file-actions">
+                            <button type="button" class="action-btn refresh-btn" id="refreshBtn"
+                                title="Atualizar lista">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                            <button type="button" class="action-btn delete-btn" id="deleteFilesBtn"
+                                title="Excluir arquivos recentes">
+                                <i class="fas fa-trash-alt"></i>
+                                Excluir Recentes
+                            </button>
+                        </div>
+                    </div>
+                    <div class="files-list" id="filesList"></div>
+                </div>
+            </section>
+
+            <!-- Technical Info -->
+            <section class="tech-info">
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <i class="fab fa-python"></i>
+                        <span>Python + Flask</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-robot"></i>
+                        <span>Selenium WebDriver</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-code"></i>
+                        <span>BeautifulSoup</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-cloud"></i>
+                        <span>Deploy Vercel</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>
+                &copy; 2025 Extracto. Desenvolvido por
+                <a href="https://www.linkedin.com/in/dev-lucasandrade/" target="_blank" rel="noopener noreferrer">
+                    @valentelucass
+                </a>
+                <i class="fas fa-heart"></i> para facilitar sua vida.
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

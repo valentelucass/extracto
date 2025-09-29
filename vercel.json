@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "front-end/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/front-end/index.html"
+    },
+    {
+      "src": "/(extrair|arquivos|download|delete|listar_arquivos|excluir_arquivos|download-all)",
+      "dest": "/app.py"
+    },
+    {
+      "src": "/download/(.*)",
+      "dest": "/app.py"
+    },
+    {
+      "src": "/delete/(.*)",
+      "dest": "/app.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/front-end/$1"
+    }
+  ]
+}

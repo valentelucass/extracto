@@ -1,0 +1,98 @@
+# Arquivos Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Ambiente Virtual
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Arquivos de resultados e extrações (pasta principal do projeto)
+resultados/
+
+# Arquivos temporários
+*.tmp
+*.temp
+.tmp/
+temp/
+
+# Arquivos de sistema operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Arquivos do editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Arquivos de configuração sensíveis
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+config.json
+secrets.json
+
+# Arquivos de deploy (Vercel)
+.vercel/
+
+# Arquivos de teste e cobertura
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.pytest_cache/
+.tox/
+.nox/
+
+# Arquivos de log
+*.log
+logs/
+
+# Arquivos de cache
+.cache/
+*.cache
+
+# Arquivos específicos do Selenium
+chromedriver
+geckodriver
+selenium-server-standalone.jar
+
+# Arquivos de lock
+*.lock
+poetry.lock
+Pipfile.lock
+
+# Arquivos de backup
+*.bak
+*.backup
+*~

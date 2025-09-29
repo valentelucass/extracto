@@ -1,0 +1,61 @@
+{
+  "name": "extrator-texto-web",
+  "version": "1.0.0",
+  "description": "Ferramenta profissional para extração inteligente de conteúdo web",
+  "main": "app.py",
+  "private": true,
+  "scripts": {
+    "start": "python app.py",
+    "dev": "python app.py",
+    "serve": "python -m http.server 8000 --directory front-end",
+    "install-python": "pip install -r requirements.txt",
+    "build": "echo 'Build completed - Static files ready'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "web-scraping",
+    "text-extraction",
+    "selenium",
+    "beautifulsoup",
+    "flask",
+    "python"
+  ],
+  "author": "Lucas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usuario/extrator-texto-web"
+  },
+  "engines": {
+    "python": ">=3.8",
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "python-dependencies": {
+    "Flask": "2.3.3",
+    "Werkzeug": "2.3.7",
+    "selenium": "4.15.2",
+    "beautifulsoup4": "4.12.2",
+    "webdriver-manager": "4.0.1",
+    "requests": "2.31.0",
+    "lxml": "4.9.3"
+  },
+  "vercel": {
+    "functions": {
+      "app.py": {
+        "runtime": "python3.9"
+      }
+    },
+    "routes": [
+      {
+        "src": "/static/(.*)",
+        "dest": "/front-end/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/app.py"
+      }
+    ]
+  }
+}
